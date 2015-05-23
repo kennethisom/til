@@ -29,3 +29,5 @@ openssl req -config req.cfg -newkey rsa:4096 -nodes -keyout subdomain.example.co
 # Protect Private Key
 chmod 600 subdomain.example.com.pem
 ```
+
+At the time this was written, the CA certificate for the free StartSSL certificates could be downloaded here: https://www.startssl.com/certs/class1/sha2/pem/sub.class1.server.sha2.ca.pem
