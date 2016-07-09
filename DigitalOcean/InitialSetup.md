@@ -36,7 +36,19 @@ If anyone tries to log in as root now, the response should be Permission denied 
 Step 3 ­— Configuring the Time Zone
 -----------------------------------
 
-All the known timezones are under the `/usr/share/zoneinfo/` directory.  Create a symbolic soft link from your zone file to /etc/localtime (Using CST as an example):
+New: List available timezones
+
+```
+timedatectl list-timezones
+```
+
+Select desired timezone
+
+```
+sudo timedatectl set-timezone America/Chicago
+```
+
+Old: All the known timezones are under the `/usr/share/zoneinfo/` directory.  Create a symbolic soft link from your zone file to /etc/localtime (Using CST as an example):
 
 ```
 sudo ln -sf /usr/share/zoneinfo/US/Central /etc/localtime
